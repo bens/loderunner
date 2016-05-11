@@ -1,10 +1,10 @@
-module Main where
+module Main exposing (main)
 
 import Array exposing (Array)
 import Color
 import Dict exposing (Dict)
-import Graphics.Element exposing (Element, show)
-import Graphics.Collage as Gfx
+import Element exposing (Element, show)
+import Collage as Gfx
 
 import LodeRunner.Input as Inp
 import LodeRunner.Types exposing (..)

@@ -1,9 +1,8 @@
-module LodeRunner.View where
+module LodeRunner.View exposing (..)
 
 import Array exposing (Array)
-import Graphics.Element as E
-import Graphics.Collage as Gfx
-import Graphics.Element exposing (Element)
+import Collage as Gfx
+import Element as E exposing (Element)
 
 import LodeRunner.Types exposing (..)
 

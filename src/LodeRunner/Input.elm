@@ -1,7 +1,7 @@
-module LodeRunner.Input where
+module LodeRunner.Input exposing (..)
 
 import Char exposing (KeyCode)
-import Keyboard exposing (keysDown)
+import Keyboard exposing (downs)
 import Set
 import Time exposing (Time)
 import Dict exposing (Dict)
@@ -18,7 +18,7 @@ type alias KeyBindings
 
 inputs : KeyBindings -> Int -> Signal Input
 inputs bindings fps =
-  let currentKey = Signal.map (Set.toList >> List.filterMap parseKey >> oneOnly) keysDown
+  let currentKey = Signal.map (Set.toList >> List.filterMap parseKey >> oneOnly) downs
       parseKey code = Dict.get (Char.toUpper (Char.fromCode code)) bindings
       oneOnly xs = if List.length xs == 1 then List.head xs else Nothing
   in Signal.mergeMany [ Signal.map InputKey currentKey

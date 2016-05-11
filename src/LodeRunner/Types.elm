@@ -1,7 +1,7 @@
-module LodeRunner.Types where
+module LodeRunner.Types exposing (..)
 
 import Array exposing (Array)
-import Graphics.Collage as Gfx
+import Collage as Gfx
 
 -- Relevent key presses
 type Key
